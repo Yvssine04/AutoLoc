@@ -31,3 +31,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Windows / Mac ###
+Thumbs.db
+desktop.ini
+.DS_Store
+
+### Logs ###
+*.log
+
+### Secrets ###
+.env
