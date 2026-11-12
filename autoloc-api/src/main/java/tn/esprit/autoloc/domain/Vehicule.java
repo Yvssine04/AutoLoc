@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -48,6 +49,7 @@ public class Vehicule {
     @JoinTable(name = "vehicule_equipement")
     private Set<Equipement> equipements = new HashSet<>();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "vehicule", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<Maintenance> maintenances = new ArrayList<>();
 }

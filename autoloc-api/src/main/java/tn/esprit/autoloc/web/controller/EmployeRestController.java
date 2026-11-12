@@ -43,4 +43,14 @@ public class EmployeRestController {
     public Employe modifyEmploye(@RequestBody Employe v) {
         return employeService.modifyEmploye(v);
     }
+
+    @PutMapping("/assignEmployeToAgence/{idEmploye}/{idAgence}")
+    public Employe affecterEmploye(@PathVariable Long idEmploye, @PathVariable Long idAgence) {
+        return employeService.affecterEmploye(idEmploye, idAgence);
+    }
+
+    @PutMapping("/desaffecterEmploye/{idEmploye}")
+    public Employe desaffecterEmploye(@PathVariable Long idEmploye) {
+        return employeService.desaffecterEmploye(idEmploye);
+    }
 }

@@ -10,4 +10,9 @@ public interface IEmployeService {
     Employe addEmploye(Employe v);
     void removeEmploye(Long employeId);
     Employe modifyEmploye(Employe employe);
+
+
+    Employe affecterEmploye(Long idEmploye, Long idAgence);
+    Employe desaffecterEmploye(Long idEmploye);
+
 }
